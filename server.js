@@ -32,7 +32,11 @@ app.use((req,res,next)=>{
     next();
 });
 
-
+/*
+app.use((req,res,next)=>{
+    res.render('maintainance.hbs');
+});
+*/
 
 app.get('/',(req,res)=>{
     res.render('home.hbs',{
@@ -53,6 +57,10 @@ app.get('/about',(req,res)=>{
     });
 });
 
+app.get('/projects',(req,res)=>{
+    res.render('projects.hbs');
+});
+
 app.listen(port,()=>{
-    console.log(`server running on port ${port}`);
+    console.log(`server running on port ${port}`)
 });
